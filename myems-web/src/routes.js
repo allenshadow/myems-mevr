@@ -158,6 +158,13 @@ export const combinedEquipmentRoutes = {
   ]
 };
 
+export const investmentRoutes = {
+  name: 'Investment Analysis',
+  to: '/investment',
+  exact: true,
+  icon: 'chart-line'
+};
+
 export const auxiliarySystemRoutes = {
   name: 'Auxiliary System',
   to: '/auxiliarysystem',
@@ -185,6 +192,7 @@ export default [
   storeRoutes,
   shopfloorRoutes,
   combinedEquipmentRoutes,
+  investmentRoutes,
   auxiliarySystemRoutes,
   knowledgeBaseRoutes
 ];
