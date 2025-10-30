@@ -112,6 +112,14 @@
 
        默认端口分别为 3000（Web）与 4200（Admin）。
 
+     - **在浏览器中访问 UI**：
+       1. 确认服务器的安全组/防火墙已放通 3000 与 4200 端口。
+       2. 在本地浏览器输入 `http://<服务器IP>:3000` 打开业务看板（myems-web）。首屏会展示登录页。
+       3. 访问 `http://<服务器IP>:4200` 打开平台管理后台（myems-admin）。
+       4. 默认初始账号可在 `myems_system_db.users` 表或 `database/postgresql/init-system-db.sql` 中查询，例如 `admin`/`admin`。首次登录后请立即修改密码。
+       5. 登录成功后，可在页面左上角切换语言，在左侧菜单浏览首页看板、项目详情、分析报表等功能模块。
+       6. 如果需要在外网或移动端访问，建议使用 Nginx 反向代理并配置 HTTPS 域名，例如 `https://ems.example.com` 反代 3000 端口、`https://admin.ems.example.com` 反代 4200 端口。
+
   4. **注册网关与采集服务**：
      - 在 `myems-modbus-tcp` 中配置采集点：
 
